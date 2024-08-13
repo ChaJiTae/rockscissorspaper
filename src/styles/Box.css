@@ -1,15 +1,16 @@
 .ContainerBox{
-    width: 500px;
-    height: 650px;
+    width: 250px;
+    height: 350px;
     place-items: center;
     text-align: center;
-    border: 7px solid black;
+    border: 2px solid black;
     border-radius: 7%;
+    box-shadow: 0 0 7px black;
 }
 
 .title{
     text-align: center;
-    font-size: 80px;
+    font-size: 40px;
 }
 
 .ContainerBox div{
@@ -18,14 +19,14 @@
 }
 
 .insertImage{
-    width: 325px;
-    height: 325px;
+    width: 150px;
+    height: 150px;
     border-radius: 30%;
 }
 
 .result{
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bolder;
 }
 
@@ -42,6 +43,6 @@
 }
 
 .TIE{
-    border: 7px solid rgb(92, 92, 253);
+    border: 3px solid rgb(92, 92, 253);
     border-radius: 7%;
 }
