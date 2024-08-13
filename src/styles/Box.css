@@ -1,0 +1,47 @@
+.ContainerBox{
+    width: 500px;
+    height: 650px;
+    place-items: center;
+    text-align: center;
+    border: 7px solid black;
+    border-radius: 7%;
+}
+
+.title{
+    text-align: center;
+    font-size: 80px;
+}
+
+.ContainerBox div{
+    display: flex;
+    justify-content: center;
+}
+
+.insertImage{
+    width: 325px;
+    height: 325px;
+    border-radius: 30%;
+}
+
+.result{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.WIN{
+    border: 3px solid green;
+    border-radius: 7%;
+    box-shadow: 0 0 15px green;
+}
+
+.LOSE{
+    border: 3px solid red;
+    border-radius: 7%;
+    box-shadow: 0 0 15px red;
+}
+
+.TIE{
+    border: 7px solid rgb(92, 92, 253);
+    border-radius: 7%;
+}
