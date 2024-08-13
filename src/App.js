@@ -25,6 +25,8 @@ function App() {
   const [userSelect,setUserSelect] = useState({});
   const [computerSelect,setComputerSelect] = useState({});
   const [result,setResult] = useState("");
+  const [totalCount,setTotalCount] = useState(0);
+  const [winCount,setWinCount] = useState(0);
 
   const currentUserSelect = (current) =>{
     const itemArray= Object.keys(choice)
@@ -35,22 +37,46 @@ function App() {
   }
 
   const judgement = (user,computer) => {
+    setTotalCount(totalCount+1)
     if(user.name===computer.name){
       return "TIE"
     }
     else if(user.name==="rock"){
-      return computer.name==="sissors" ? "WIN" : "LOSE";
+      if(computer.name==="sissors"){
+        setWinCount(winCount+1);
+        return "WIN"
+      }
+      else {
+        return "LOSE"
+      }
     }
     else if(user.name==="paper"){
-      return computer.name==="rock" ? "WIN" : "LOSE";
+      if(computer.name==="rock"){
+        setWinCount(winCount+1);
+        return "WIN"
+      }
+      else {
+        return "LOSE"
+      }
     }
     else {
-      return computer.name==="paper" ? "WIN" : "LOSE";
+      if(computer.name==="paper"){
+        setWinCount(winCount+1);
+        return "WIN"
+      }
+      else {
+        return "LOSE"
+      }
     }
   }
 
   return (
     <div className='mainBox'>
+      <div className='textSet'>
+        <div className='gameTotalCount'>게임 횟수 : {totalCount} </div>
+        <div className='textSlash'> / </div>
+        <div className='gameWinCount'> 이긴 횟수 : {winCount}</div>
+      </div>
       <div className='container'>
           <Box className="boxComponent" item={userSelect} title="You" result={result}/>
           <Box className="boxComponent" item={computerSelect} title="Computer" result={result}/>
