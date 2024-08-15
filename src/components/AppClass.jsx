@@ -1,9 +1,9 @@
-import React, { Component, useState } from 'react'
-import './App.css';
-import Box from './components/Box';
-import RockImage from '../src/images/Rock.png'
-import PaperImage from '../src/images/Paper.png'
-import SissorsImage from '../src/images/Sissors.png'
+import React, { Component } from 'react'
+import '../App.css';
+import BoxClass from './BoxClass';
+import RockImage from '../images/Rock.png'
+import PaperImage from '../images/Paper.png'
+import SissorsImage from '../images/Sissors.png'
 
 const choice = {
     rock: {
@@ -88,8 +88,8 @@ export default class AppClass extends Component {
                     <div className='gameWinCount'> 이긴 횟수 : {this.state.winCount}</div>
                 </div>
                 <div className='container'>
-                    <Box className="boxComponent" item={this.state.userSelect} title="You" result={this.state.result} />
-                    <Box className="boxComponent" item={this.state.computerSelect} title="Computer" result={this.state.result} />
+                    <BoxClass className="boxComponent" item={this.state.userSelect} title="You" result={this.state.result} />
+                    <BoxClass className="boxComponent" item={this.state.computerSelect} title="Computer" result={this.state.result} />
                 </div>
                 <div className="buttonSet">
                     <img onClick={() =>this.currentUserSelect("sissors") } className="buttonSubmitImage" src={SissorsImage} />
